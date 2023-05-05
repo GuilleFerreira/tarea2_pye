@@ -84,13 +84,9 @@ def juegamaria(resultadojuan):
         #Si el dado de Maria es mayor al de Juan no se vuelve a tirar
         if dado2 > resultadojuan:
             return dado2
-        #Si el dado de maria es igual al de Juan y es menor o igual a 3 se tira de nuevo
+        #Si el dado de maria es igual al de Juan
         if dado2 == resultadojuan:
-            if dado2 <= 3:
-                nuevoDado = random.randint(1,6)
-                return nuevoDado
-            else:
-                return dado2
+            return dado2
         #Si el dado de Maria es menor al de Juan se tira de nuevo
         else:
             nuevoDado = random.randint(1,6)
@@ -129,19 +125,19 @@ def juego():
         return 0
 
 
-#for i in range(10):
-#  juego()
-
+"""
+PRINTS DE LAS SIMULACIONES
+"""
 
 ### RESULTADOS PARA 1000 ###
 resultados1000 = []
 for i in range(1000):
   resultados1000.append(juego())
 
-print("Resultados de 1000 juegos: ")
-print("Juan gana: ", resultados1000.count(1))
-print("Maria gana: ", resultados1000.count(2))
-print("Empates: ", resultados1000.count(0))
+print("Resultados de 1000 juegos (Frecuencia Relativa):")
+print("Juan gana: ", resultados1000.count(1)/1000)
+print("Maria gana: ", resultados1000.count(2)/1000)
+print("Empates: ", resultados1000.count(0)/1000)
 
 print("\n")
 
@@ -150,18 +146,19 @@ resultados10000 = []
 for i in range(10000):
   resultados10000.append(juego())
 
-print("Resultados de 10000 juegos: ")
-print("Juan gana: ", resultados10000.count(1))
-print("Maria gana: ", resultados10000.count(2))
-print("Empates: ", resultados10000.count(0))
+print("Resultados de 10000 juegos (Frecuencia Relativa): ")
+print("Juan gana: ", resultados10000.count(1)/10000)
+print("Maria gana: ", resultados10000.count(2)/10000)
+print("Empates: ", resultados10000.count(0)/10000)
 
 print("\n")
+
 ### RESULTADOS PARA 100000 ###
 resultados100000 = []
 for i in range(100000):
   resultados100000.append(juego())
 
-print("Resultados de 100000 juegos: ")
-print("Juan gana: ", resultados100000.count(1))
-print("Maria gana: ", resultados100000.count(2))
-print("Empates: ", resultados100000.count(0))
+print("Resultados de 100000 juegos (Frecuencia Relativa): ")
+print("Juan gana: ", resultados100000.count(1)/100000)
+print("Maria gana: ", resultados100000.count(2)/100000)
+print("Empates: ", resultados100000.count(0)/100000)
