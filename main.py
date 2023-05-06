@@ -67,7 +67,7 @@ def juegamaria(resultadojuan):
     elif dado1 != 4 and dado2 == 4:
         #Si el dado de Maria es mayor al de Juan no se vuelve a tirar
         if dado1 > resultadojuan:
-            return dado2
+            return dado1
         #Si el dado de maria es igual al de Juan y es menor o igual a 3 se tira de nuevo
         if dado1 == resultadojuan:
             if dado1 <= 3:
